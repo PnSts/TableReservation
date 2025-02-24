@@ -10,6 +10,7 @@ import {
 import { Box, HStack, Image } from "@chakra-ui/react";
 
 
+
 const socials = [
   {
     icon: faEnvelope,
@@ -35,9 +36,11 @@ const socials = [
 
 const sections = [
     { aName: "Home", urlName:"home", sectionName: "home" },
-    { aName: "Specials", urlName:"specials", sectionName: "specials" },
-    { aName: "Testimonials", urlName:"testimonials", sectionName: "testimonials" },
     { aName: "About", urlName:"about", sectionName: "about" },
+    { aName: "Menu", urlName:"menu", sectionName: "menu" },
+    { aName: "Reservations", urlName:"reservations", sectionName: "reservations" },
+    { aName: "Order online", urlName:"order_online", sectionName: "order_online" },
+    { aName: "Login", urlName:"login", sectionName: "login" },
 ];
 
 
@@ -85,32 +88,23 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      backgroundColor="#FFFFFF"
       zIndex={1000}
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box color="black" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
-          py={4}
+          py={6}
           justifyContent="space-between"
           alignItems="center"
         >
-          {/* <nav>
-            <ul>
-              {socials.map((social, index) => (
-                <li key={index}>
-                  <a href={social.url} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={social.icon} size="2x" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav> */}
-          <nav>
-            <Image src={"../public/logo192.png"} maxWidth="50"></Image>
+
+          <Image src={"logo_coloured_inline.jpg"} height="60px"/>
+          <nav >
             <HStack spacing={8}>
               {sections.map((section, index) => (
-                <a
+                <a 
+                  class="karlaText"
                   key={index}
                   href={`/#${section.urlName}`}
                   onClick={handleClick(section.sectionName)}
