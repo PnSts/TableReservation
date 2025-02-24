@@ -99,12 +99,12 @@ const Header = () => {
           alignItems="center"
         >
 
-          <Image src={"logo_coloured_inline.jpg"} height="60px"/>
+          <Image src={"logo_coloured_inline.jpg"} title="logo_header" height="60px"/>
           <nav >
             <HStack spacing={8}>
               {sections.map((section, index) => (
                 <a 
-                  class="karlaText"
+                  className="karlaText"
                   key={index}
                   href={`/#${section.urlName}`}
                   onClick={handleClick(section.sectionName)}
