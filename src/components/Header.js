@@ -7,31 +7,31 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Image } from "@chakra-ui/react";
 
 
-// const socials = [
-//   {
-//     icon: faEnvelope,
-//     url: "mailto: hello@example.com",
-//   },
-//   {
-//     icon: faGithub,
-//     url: "https://github.com",
-//   },
-//   {
-//     icon: faLinkedin,
-//     url: "https://www.linkedin.com",
-//   },
-//   {
-//     icon: faMedium,
-//     url: "https://medium.com",
-//   },
-//   {
-//     icon: faStackOverflow,
-//     url: "https://stackoverflow.com",
-//   },
-// ];
+const socials = [
+  {
+    icon: faEnvelope,
+    url: "mailto: hello@example.com",
+  },
+  {
+    icon: faGithub,
+    url: "https://github.com",
+  },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com",
+  },
+  {
+    icon: faMedium,
+    url: "https://medium.com",
+  },
+  {
+    icon: faStackOverflow,
+    url: "https://stackoverflow.com",
+  },
+];
 
 const sections = [
     { aName: "Home", urlName:"home", sectionName: "home" },
@@ -74,6 +74,7 @@ const Header = () => {
   };
   
   return (
+    
     <Box
       ref={headerRef}
       position="fixed"
@@ -106,12 +107,12 @@ const Header = () => {
             </ul>
           </nav> */}
           <nav>
-            <Image src={"../images/logo192.png"} ></Image>
+            <Image src={"../public/logo192.png"} maxWidth="50"></Image>
             <HStack spacing={8}>
               {sections.map((section, index) => (
                 <a
                   key={index}
-                  href={`/#${section.urlName}`} 
+                  href={`/#${section.urlName}`}
                   onClick={handleClick(section.sectionName)}
                 >
                   {section.aName}
