@@ -1,11 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        HomePage
-    </div>
+    <ChakraProvider>
+      <AlertProvider>
+        <main>
+          <Header/>
+          <HeroSection />
+          <SpecialsSection />
+          <TestimonialsSection />
+          <AboutSection />
+          <Footer />
+          <Alert />
+        </main>
+      </AlertProvider>
+    </ChakraProvider>
   );
 }
 
