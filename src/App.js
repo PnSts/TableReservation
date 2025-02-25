@@ -1,5 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import SpecialsSection from "./components/SpecialsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import 'typeface-karla';
 import 'typeface-markazi-text';
@@ -11,10 +15,10 @@ function App() {
     <ChakraProvider>    
         <>
           <Header/>
-          {/* <HeroSection />
+          <HeroSection />
           <SpecialsSection />
           <TestimonialsSection />
-          <AboutSection /> */}
+          <AboutSection />
           <Footer/>
           {/* <Alert /> */}
         </>

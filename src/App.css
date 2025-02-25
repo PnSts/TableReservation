@@ -42,7 +42,20 @@
   font-size: 20px;
 }
 
-.markaziText {
+.markaziTitle {
   font-family: 'Markazi Text', serif;
   font-size: 64px;
+}
+
+.markaziText {
+  font-family: 'Markazi Text', serif;
+  font-size: 28px;
+}
+
+.yellowLemon {
+  color: #F4CE14;
+}
+
+.greenLemon {
+  color: #495E57;
 }

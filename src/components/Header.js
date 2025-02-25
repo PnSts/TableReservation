@@ -1,38 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-  faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Image } from "@chakra-ui/react";
 
-
-
-const socials = [
-  {
-    icon: faEnvelope,
-    url: "mailto: hello@example.com",
-  },
-  {
-    icon: faGithub,
-    url: "https://github.com",
-  },
-  {
-    icon: faLinkedin,
-    url: "https://www.linkedin.com",
-  },
-  {
-    icon: faMedium,
-    url: "https://medium.com",
-  },
-  {
-    icon: faStackOverflow,
-    url: "https://stackoverflow.com",
-  },
-];
 
 const sections = [
     { aName: "Home", urlName:"home", sectionName: "home" },
@@ -99,7 +67,7 @@ const Header = () => {
           alignItems="center"
         >
 
-          <Image src={"logo_coloured_inline.jpg"} title="logo_header" height="60px"/>
+          <Image src={"logo_coloured_inline.jpg"} title="logo_header" alt="Little Lemon" height="60px"/>
           <nav >
             <HStack spacing={8}>
               {sections.map((section, index) => (
