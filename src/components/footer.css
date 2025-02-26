@@ -1,0 +1,71 @@
+footer {
+    background-color: #495e57;
+    color: #ffffff;
+    padding: 2.5rem 6%;
+    height: auto;
+    display: grid;
+    gap: 2rem;
+    list-style: none;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, minmax(6rem, max-content));
+    font-size: 20px;
+  }
+  
+  .footer-logo {
+    width: 8rem;
+  }
+  
+  footer h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;    
+    color: #f4ce14;
+    font-family: 'Markazi Text', serif;
+  }
+  
+  footer a, footer a:visited, footer a:active, footer li {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer a:hover,footer a:focus,
+  footer li:hover,footer li:focus {
+    color: #f4ce14;
+    list-style: none;
+  }
+  
+  .footer-nav li {
+    margin-bottom: 0.25rem;
+    list-style: none;
+  }
+  
+  .footer-contact svg {
+    margin-right: 0.5rem;
+  }
+  
+  .footer-contact p {
+    margin-bottom: 0.25rem;
+  }
+  
+  .footer-social svg {
+    margin-right: 1rem;
+  }
+  
+  @media (max-width: 799px) {
+    footer {
+      height: 29.25rem;
+      grid-template-columns: repeat(2, minmax(6rem, max-content));
+    }
+  }
+  
+  @media (max-width: 499px) {
+    footer {
+      height: 55rem;
+      text-align: center;
+      grid-template-columns: repeat(1, minmax(6rem, max-content));
+    }
+    .footer-nav, footer > div{
+        text-align: center;
+    }
+  }
+  

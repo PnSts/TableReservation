@@ -1,104 +1,68 @@
 import React from "react";
-import { Box, Flex, HStack, Image, VStack } from "@chakra-ui/react";
-import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faFacebook,
-  faLinkedin,
-  faMedium,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { HashLink } from "react-router-hash-link";
+import logoWhiteSquare from "../assets/logo_white_square.png";
+import "./footer.css";
 
-const sections = [
-  { aName: "Home", urlName: "home", sectionName: "home" },
-  { aName: "About", urlName: "about", sectionName: "about" },
-  { aName: "Menu", urlName: "menu", sectionName: "menu" },
-  { aName: "Reservations", urlName: "reservations", sectionName: "reservations" },
-  { aName: "Order online", urlName: "order_online", sectionName: "order_online" },
-  { aName: "Login", urlName: "login", sectionName: "login" },
+const socials = [
+  { icon: faFacebook, name: "facebook" },
+  { icon: faInstagram, name: "instagram" },
+  { icon: faTwitter, name: "twitter" },
+  { icon: faLinkedin, name: "linkedin" },
 ];
 
-const handleClick = (anchor) => () => {
-  const id = `${anchor}-section`;
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-};
 
-const Footer = () => {
+const Footer = ({ navLinks }) => {
   return (
-    <Box backgroundColor="#495E57">
-      <footer>
-        <Flex
-          margin="0 auto"
-          px={50}
-          gap={40}
-          py={8}
-          color="white"
-          justifyContent="center"
-          alignItems="flex-start"        
-        >
-          
-            <Box>
-              <Image src={"logo_white_square.png"} title="logo_header" alt="Little Lemon" height="250px" />
-            </Box>
-            <Box>
-              <p className="yellowLemon markaziText">Doormat Navigation</p>
-              <nav>
-                <VStack spacing={2} align={faAlignLeft}>
-                  {sections.map((section, index) => (
-                    <a
-                      className="karlaText"
-                      key={index}
-                      href={`/#${section.urlName}`}
-                      onClick={handleClick(section.sectionName)}
-                    >
-                      {section.aName}
-                    </a>
-                  ))}
-                </VStack>
-              </nav>
-            </Box>
-            <Box>
-              <p className="yellowLemon markaziText">Contact</p>
-              <nav className="karlaText">
-                <VStack spacing={2} align={faAlignLeft}>
-                  <span><u>Address</u></span>
-                  <span>111 Street, New Town</span>
-                  <span><u>Telephone</u></span>
-                  <span>(+308) 804 7885</span>
-                  <span><u>Email</u></span>
-                  <a href="mailto: info@littlelemon.com"
-                    target="_blank"
-                    rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} size="1x" />info@littlelemon.com</a>
-                </VStack>
-              </nav>
-            </Box>
-            <Box>
-              <p className="yellowLemon markaziText">Social Media</p>
-              <nav className="karlaText">
-                <VStack spacing={2}>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faFacebook} size="1x" />
-                  </a>
-                  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faTwitter} size="1x" />
-                  </a>
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} size="1x" />
-                  </a>
-                </VStack>
-              </nav>
-            </Box>
-        </Flex>
-      </footer>
-    </Box >
+    <footer>
+      <div>
+        <img
+        className="footer-logo"
+        src={logoWhiteSquare}
+        alt="Little Lemon"
+      />
+      </div>
+      <div>
+      <nav className="footer-nav">
+        <h4>Sitemap</h4>
+        <ul>
+          {navLinks.map((navLink, index) => (
+            <li key={index}>
+              <HashLink to={navLink.path}>{navLink.name}</HashLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      </div>
+      <div className="footer-contact">
+        <h4>Contact us</h4>
+        <address><FontAwesomeIcon icon={faLocationDot} size="1x" /> 111 Street, New Town</address>
+        <address><FontAwesomeIcon icon={faPhone} size="1x" /> (308) 804 7885</address>
+        <address>
+          <a href="mailto: info@littlelemon.com"
+            target="_blank"
+            rel="noreferrer">
+            <FontAwesomeIcon icon={faEnvelope} size="1x" /> info@littlelemon.com
+          </a>
+        </address>
+      </div>
+      <div className="footer-social">
+        <h4>Connect with us</h4>
+        {socials.map((social, index) => (
+          <a
+            key={index}
+            href={`https://www.${social.name}.com`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={social.icon} size="lg" />
+          </a>
+        ))}
+      </div>
+    </footer>
+
   );
 };
 export default Footer;
