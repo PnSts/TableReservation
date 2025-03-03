@@ -43,7 +43,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   line-height: 1;
   font-family: "Markazi Text";
   font-weight: normal;
@@ -55,6 +56,10 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 label {
@@ -112,15 +117,14 @@ img {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   background-color: #f4ce14;
-  color: #495e57;
+  color: black;
   font-weight: bold;
-  border: 2px solid #f4ce14;
 }
 
 .button-primary:hover,
 .button-primary:focus {
-  background-color: #495e57;
-  border-color: #495e57;
+  background-color: black;
   color: #ffffff;
+  border: 0rem;
 }
 

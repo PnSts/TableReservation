@@ -37,14 +37,12 @@ footer {
   .footer-nav li {
     margin-bottom: 0.25rem;
     list-style: none;
+    font-size: smaller;
   }
   
-  .footer-contact svg {
-    margin-right: 0.5rem;
-  }
-  
-  .footer-contact p {
-    margin-bottom: 0.25rem;
+  .footer-contact address{
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   
   .footer-social svg {
