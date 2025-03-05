@@ -1,4 +1,3 @@
-
 import chicago1 from "../../assets/restaurant.jpg";
 import chicago2 from "../../assets/Mario-and-Adrian-B.jpg";
 
