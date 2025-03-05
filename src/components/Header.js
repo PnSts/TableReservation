@@ -89,49 +89,7 @@ const Header = ({ navLinks }) => {
         </ul>
       </nav>
     </header>
-  //   <Box
-  //     ref={headerRef}
-  //     position="fixed"
-  //     top={0}
-  //     left={0}
-  //     right={0}
-  //     transform="translateY(0)"
-  //     transitionProperty="transform"
-  //     transitionDuration=".3s"
-  //     transitionTimingFunction="ease-in-out"
-  //     backgroundColor="#FFFFFF"
-  //     zIndex={1000}
-  //   >
-  //     <Box color="black" maxWidth="1280px" margin="0 auto">
-  //       <HStack
-  //         px={16}
-  //         py={6}
-  //         justifyContent="space-between"
-  //         alignItems="center"
-  //       >
-
-  //         <Image src={"logo_coloured_inline.jpg"} title="Little Lemon logo" alt="Little Lemon" height="60px"/>
-  //         <nav >
-  //           <ul>
-  //           {/* <HStack spacing={8}> */}
-  //             {sections.map((section, index) => (
-  //               <li key={index}>
-  //                 <a 
-  //                   className="karlaText"
-  //                   key={index}
-  //                   href={`/#${section.urlName}`}
-  //                   onClick={handleClick(section.sectionName)}
-  //                 >
-  //                   {section.aName}
-  //                 </a>
-  //               </li>
-  //             ))}
-  //           {/* </HStack> */}
-  //           </ul>
-  //         </nav>
-  //       </HStack>
-  //     </Box>
-  //   </Box>
+ 
   );
 };
 export default Header;
