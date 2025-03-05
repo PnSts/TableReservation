@@ -4,9 +4,15 @@ const Reservations = () => {
     <section className="container grid reservations">
       <h2>Reserve a table</h2>
 
-      <div className="about-restaurant">
-        <img src={chicago1} alt="Chicago Restaurant" />
-        <img src={chicago2} alt="Chefs Mario and Adrian" />
+      <div className="reservations-navbar">
+        <ul>
+          <li>Table Details</li>
+          <li>Contact Info</li>
+          <li>Review</li>
+        </ul>
+      </div>
+      <div className="reservations-main">
+        
       </div>
     </section>
   );
