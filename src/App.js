@@ -8,6 +8,7 @@ import Reservations from "./components/Reservations/ReservationsHome";
 import 'typeface-karla';
 import 'typeface-markazi-text';
 import './App.css';
+import ReservationsFormContact from "./components/Reservations/ReservationsFormContact";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/reservations" element={<Reservations />} />
+            <Route path="/reservationsContact" element={<ReservationsFormContact />} />
             {/* <Route
               path="/confirmedReservation"
               element={<ConfirmedReservation />}

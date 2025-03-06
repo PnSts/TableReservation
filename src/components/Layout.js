@@ -25,6 +25,11 @@ const Layout = ({ children }) => {
       hashLink: false,
     },
     {
+      name: "ReservationsContact",
+      path: "/reservationsContact",
+      hashLink: false,
+    },
+    {
       name: "Order Online",
       path: "/orderOnline",
       hashLink: false,

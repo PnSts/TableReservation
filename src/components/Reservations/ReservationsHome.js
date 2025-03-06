@@ -1,5 +1,6 @@
 import "./reservations.css";
-import ReservationsForm from "./ReservationsForm";
+import ReservationsFormDetails from "./ReservationsFormDetails";
+import ReservationsFormContact from "./ReservationsFormContact";
 
 const Reservations = () => {
   return (
@@ -13,8 +14,7 @@ const Reservations = () => {
         </ul>
       </div>
       <div className="reservations-main">
-    <ReservationsForm/>
-
+        <ReservationsFormDetails/>
       </div>
     </section>
   );
