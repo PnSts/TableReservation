@@ -51,7 +51,7 @@ const Reservations = () => {
 
   const submitData = (formData) => {
     const response = submitAPI(formData);
-    if (response) navigate("/confirmedReservation");
+    if (response) navigate("/confirmation");
   };
 
   const handleFormSubmit = (e) => {
@@ -70,7 +70,6 @@ const Reservations = () => {
     // setBooking(updateBooking);
     // goToReview(true);
     submitData({ booking })
-    navigate("/reservationConfirmation");
 };
   return (
     <section className="reservations container grid">
@@ -90,13 +89,11 @@ const Reservations = () => {
             setBooking={setBooking}
             goToReview={goToReview}
             availableTimes={availableTimes}
-            dispatchOnDateChange={dispatchOnDateChange}
-            submitData={submitData} /> :
+            dispatchOnDateChange={dispatchOnDateChange} /> :
           <ReservationReview
             booking={booking}
             goToReview={goToReview}
             availableTimes={availableTimes}
-            dispatchOnDateChange={dispatchOnDateChange}
             submitData={submitData} />}
       </form>
       </div>

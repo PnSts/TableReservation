@@ -160,3 +160,39 @@
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
+
+/*Confirmation*/
+.confirmed-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 0;
+  min-height: calc(100vh - 6.25rem - 18rem);
+  background-color: #EDEFEE;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.confirmed-reservation img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.confirmed-reservation h2 {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.confirmed-reservation h3 {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  color: #495e57;
+}
+
+.confirmed-reservation p {
+  padding-top: 0.25rem;
+}
