@@ -25,11 +25,6 @@ const Layout = ({ children }) => {
       hashLink: false,
     },
     {
-      name: "ReservationsContact",
-      path: "/reservationsContact",
-      hashLink: false,
-    },
-    {
       name: "Order Online",
       path: "/orderOnline",
       hashLink: false,
@@ -44,7 +39,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header navLinks={navLinks} />
-      <main id="home">{children}</main>
+      <main id="home">{children}</main>   
       <Footer navLinks={navLinks} />
     </>
   );

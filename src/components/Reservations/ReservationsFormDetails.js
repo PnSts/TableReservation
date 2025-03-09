@@ -1,13 +1,19 @@
 import { useState } from "react";
-import FormField from "./formfield";
+import FormField from "./Formfield";
 import { HashLink } from "react-router-hash-link";
 
-const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
 
 const ReservationsFormDetails = ({
+    booking,
+    occasions,
+    setBooking,
+    goToReview,
     dispatchOnDateChange,
     submitData,
+    availableTimes,
 }) => {
+
     const minimumDate = new Date().toISOString().split("T")[0];
 
     const defaultTime = availableTimes[0];
@@ -15,40 +21,81 @@ const ReservationsFormDetails = ({
     const minimumNumberOfGuests = 1;
     const maximumNumberOfGuests = 10;
 
-    const occasions = ["Birthday", "Anniversary", "Engagement", "Other"];
-
     const invalidDateErrorMessage = "Please choose a valid date";
     const invalidTimeErrorMessage = "Please choose a valid time";
     const invalidOccasionErrorMessage = "Please choose a valid occasion";
     const invalidNumberOfGuestsErrorMessage = "Please enter a number between 1 and 10";
+    const invalidFirstNameErrorMessage = "Please enter first name";
+    const invalidLastNameErrorMessage = "Please enter last name";
+    const invalidMailErrorMessage = "Please enter a valid email";
+    const invalidPhoneErrorMessage = "Please enter a valid phone number";
+
+
 
     const [date, setDate] = useState(minimumDate);
     const [time, setTime] = useState(defaultTime);
     const [numberOfGuests, setNumberGuests] = useState(minimumNumberOfGuests);
     const [occasion, setOccasion] = useState(occasions[0]);
+    const [info, setInfo] = useState("");
+    const [lastname, setLastname] = useState({ isTouched: false });
+    const [firstname, setFirstname] = useState({ isTouched: false });
+    const [mail, setMail] = useState({ isTouched: false });
+    const [phone, setPhone] = useState({ isTouched: false });
 
-    const isDateValid = () => date !== "";
-    const isTimeValid = () => time !== "";
-    const isNumberOfGuestsValid = () => numberOfGuests !== "";
-    const isOccasionValid = () => occasion !== "";
+    const isDateValid = () => booking.bDate !== "";
+    const isTimeValid = () => booking.bTime !== "";
+    const isNumberOfGuestsValid = () => booking.bNumberOfGuests !== "";
+    const isOccasionValid = () => booking.bOccasion !== "";
+    const isLastNameValid = () => booking.bLastname !== "";
+    const isFirstNameValid = () => booking.bFirstname !== "";
+    const isMailValid = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    const isPhoneValid = (phoneNumber) => {
+        const phoneRegex = /^[0-9]{10}$/;
+        return phoneRegex.test(phoneNumber);
+    };
 
-    const areAllFieldsValid = () =>
-        isDateValid() && isTimeValid() && isNumberOfGuestsValid() && isOccasionValid();
+    const areAllFieldsValid = () => {
+        return (
+            isDateValid() && isTimeValid() &&
+            isNumberOfGuestsValid() && isOccasionValid() &&
+            isLastNameValid() && isFirstNameValid() &&
+            isMailValid(booking.bMail) && isPhoneValid(booking.bPhone));
+    };
 
     const handleDateChange = (e) => {
         setDate(e.target.value);
+        handleChange(e);
         dispatchOnDateChange(e.target.value);
     };
+    // const handleTimeChange = (e) => setTime(e.target.value);
+    // const handleInfoChange = (e) => setInfo(e.target.value);
+    // const handleLastnameChange = (e) => setLastname({ ...lastname, value: e.target.value });
+    // const handleFirstnameChange = (e) => setFirstname({ ...firstname, value: e.target.value });
+    // const handleMailChange = (e) => setMail({ ...mail, value: e.target.value });
+    // const handlePhoneChange = (e) => setPhone({ ...phone, value: e.target.value });
 
-    const handleTimeChange = (e) => setTime(e.target.value);
+    // const handleTimeChange = (e) => { handleChange(e) };
+    // const handleInfoChange = (e) => { handleChange(e) };
+    // const handleLastnameChange = (e) => { handleChange(e) };
+    // const handleFirstnameChange = (e) => { handleChange(e) };
+    // const handleMailChange = (e) => { handleChange(e) };
+    // const handlePhoneChange = (e) => { handleChange(e) };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        submitData({ date, time, numberOfGuests, occasion });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setBooking((prevBooking) => ({
+            ...prevBooking,
+            [name]: value,
+        }));
     };
 
+    
+
     return (
-        <form onSubmit={handleFormSubmit} >
+        <section>
             <div className="form-grid">
                 <FormField
                     label="Date"
@@ -59,9 +106,9 @@ const ReservationsFormDetails = ({
                     <input
                         type="date"
                         id="reservation-date"
-                        name="reservation-date"
+                        name="bDate"
                         min={minimumDate}
-                        value={date}
+                        value={booking.bDate}
                         required={true}
                         onChange={handleDateChange}
                     />
@@ -75,10 +122,10 @@ const ReservationsFormDetails = ({
                     <div className="select-wrapper">
                         <select
                             id="reservation-time"
-                            name="reservation-time"
-                            value={time}
+                            name="bTime"
+                            value={booking.bTime}
                             required={true}
-                            onChange={handleTimeChange}
+                            onChange={handleChange}
                         >
                             {availableTimes.map((times) => (
                                 <option data-testid="reservation-time-option" key={times}>
@@ -97,12 +144,12 @@ const ReservationsFormDetails = ({
                     <input
                         type="number"
                         id="reservation-number-guests"
-                        name="reservation-number-guests"
-                        value={numberOfGuests}
+                        name="bNumberOfGuests"
+                        value={booking.bNumberOfGuests}
                         min={minimumNumberOfGuests}
                         max={maximumNumberOfGuests}
                         required={true}
-                        onChange={(e) => setNumberGuests(e.target.value)}
+                        onChange={handleChange}
                     />
                 </FormField>
                 <FormField
@@ -114,10 +161,10 @@ const ReservationsFormDetails = ({
                     <div className="select-wrapper">
                         <select
                             id="reservation-occasion"
-                            name="reservation-occasion"
-                            value={occasion}
+                            name="bOccasion"
+                            value={booking.bOccasion}
                             required={true}
-                            onChange={(e) => setOccasion(e.target.value)}
+                            onChange={handleChange}
                         >
                             {occasions.map((occasion) => (
                                 <option data-testid="reservation-occasion-option" key={occasion}>
@@ -127,14 +174,93 @@ const ReservationsFormDetails = ({
                         </select>
                     </div>
                 </FormField>
-                <button className="button-primary button-back" type="button">
-                    <HashLink to="/#home">Back</HashLink>
-                </button>
-                <button className="button-primary button-next" type="button"
-                    disabled={!areAllFieldsValid()}><HashLink to="/reservationsContact">Next</HashLink>
-                </button>
             </div>
-        </form>
+            <div id="textarea-info">
+                <FormField label="Additional Info"
+                    htmlFor="reservation-info">
+                    <textarea
+                        rows="3"
+                        maxLength="200"
+                        name="bInfo"
+                        id="reservation-info"
+                        onChange={handleChange}
+                        value={booking.bInfo}
+                    />
+                </FormField>
+            </div>
+
+            <div className="form-grid">
+                <FormField label="Last Name"
+                    htmlFor="reservation-lastname"
+                    hasError={lastname.isTouched && !isLastNameValid()}
+                    errorMessage={invalidLastNameErrorMessage}>
+                    <input
+                        type="text"
+                        name="bLastname"
+                        id="reservation-lastname"
+                        required={true}
+                        onChange={handleChange}
+                        onBlur={(e) => setLastname({ isTouched: true })}
+                        value={booking.bLastname}
+                    />
+                </FormField>
+
+                <FormField label="First Name"
+                    htmlFor="reservation-firstname"
+                    hasError={firstname.isTouched && !isFirstNameValid()}
+                    errorMessage={invalidFirstNameErrorMessage}>
+                    <input
+                        type="text"
+                        name="bFirstname"
+                        id="reservation-firstname"
+                        required={true}
+                        onChange={handleChange}
+                        onBlur={(e) => setFirstname({ isTouched: true })}
+                        value={booking.bFirstname}
+                    />
+                </FormField>
+
+                <FormField label="Email address"
+                    htmlFor="reservation-mail"
+                    hasError={mail.isTouched && !isMailValid(booking.bMail)}
+                    errorMessage={invalidMailErrorMessage}>
+                    <input
+                        type="email"
+                        name="bMail"
+                        id="reservation-mail"
+                        required={true}
+                        onChange={handleChange}
+                        onBlur={(e) => setMail({ isTouched: true })}
+                        value={booking.bMail}
+                    />
+                </FormField>
+
+                <FormField label="Phone Number"
+                    htmlFor="reservation-phone"
+                    hasError={phone.isTouched && !isPhoneValid(booking.bPhone)}
+                    errorMessage={invalidPhoneErrorMessage}>
+                    <input
+                        type="text"
+                        name="bPhone"
+                        id="reservation-phone"
+                        required={true}
+                        onChange={handleChange}
+                        onBlur={(e) => setPhone({ isTouched: true })}
+                        value={booking.bPhone}
+                    />
+                </FormField>
+
+                <HashLink className="button-primary button-back" to="/#home">
+                    Back
+                </HashLink>
+                <HashLink
+                    className={`button-primary button-next ${!areAllFieldsValid() ? "disabled" : ""}`}
+                    onClick={(e) => { (!areAllFieldsValid()) ? e.preventDefault() : goToReview(true); }}
+                >
+                    Next
+                </HashLink>
+            </div>
+            </section>
     );
 };
 

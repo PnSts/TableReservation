@@ -65,6 +65,7 @@ h3 {
 label {
   width: fit-content;
   cursor: pointer;
+  font-weight: bold;
 }
 
 input,
@@ -90,9 +91,6 @@ select:focus {
   border: 1px solid #495e57;
 }
 
-label {
-  font-weight: bold;
-}
 
 button {
   border: none;

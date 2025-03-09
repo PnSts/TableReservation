@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home/Home";
-import Reservations from "./components/Reservations/ReservationsHome";
+import ReservationsHome from "./components/Reservations/ReservationsHome";
 // import ConfirmedReservation from "./components/pages/Reservations/confirmedReservation";
 // import NotFound from "./components/pages/NotFound/NotFound";
 // import { ChakraProvider } from "@chakra-ui/react";
 import 'typeface-karla';
 import 'typeface-markazi-text';
 import './App.css';
-import ReservationsFormContact from "./components/Reservations/ReservationsFormContact";
 
 
 function App() {
@@ -20,8 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/reservations" element={<Reservations />} />
-            <Route path="/reservationsContact" element={<ReservationsFormContact />} />
+            <Route path="/reservations" element={<ReservationsHome />} />
             {/* <Route
               path="/confirmedReservation"
               element={<ConfirmedReservation />}
