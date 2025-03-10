@@ -10,13 +10,12 @@ const ReservationsFormDetails = ({
     setBooking,
     goToReview,
     dispatchOnDateChange,
-    submitData,
     availableTimes,
 }) => {
 
     const minimumDate = new Date().toISOString().split("T")[0];
 
-    const defaultTime = availableTimes[0];
+    // const defaultTime = availableTimes[0];
 
     const minimumNumberOfGuests = 1;
     const maximumNumberOfGuests = 10;
@@ -31,12 +30,6 @@ const ReservationsFormDetails = ({
     const invalidPhoneErrorMessage = "Please enter a valid phone number";
 
 
-
-    const [date, setDate] = useState(minimumDate);
-    const [time, setTime] = useState(defaultTime);
-    const [numberOfGuests, setNumberGuests] = useState(minimumNumberOfGuests);
-    const [occasion, setOccasion] = useState(occasions[0]);
-    const [info, setInfo] = useState("");
     const [lastname, setLastname] = useState({ isTouched: false });
     const [firstname, setFirstname] = useState({ isTouched: false });
     const [mail, setMail] = useState({ isTouched: false });
@@ -66,23 +59,9 @@ const ReservationsFormDetails = ({
     };
 
     const handleDateChange = (e) => {
-        setDate(e.target.value);
         handleChange(e);
         dispatchOnDateChange(e.target.value);
     };
-    // const handleTimeChange = (e) => setTime(e.target.value);
-    // const handleInfoChange = (e) => setInfo(e.target.value);
-    // const handleLastnameChange = (e) => setLastname({ ...lastname, value: e.target.value });
-    // const handleFirstnameChange = (e) => setFirstname({ ...firstname, value: e.target.value });
-    // const handleMailChange = (e) => setMail({ ...mail, value: e.target.value });
-    // const handlePhoneChange = (e) => setPhone({ ...phone, value: e.target.value });
-
-    // const handleTimeChange = (e) => { handleChange(e) };
-    // const handleInfoChange = (e) => { handleChange(e) };
-    // const handleLastnameChange = (e) => { handleChange(e) };
-    // const handleFirstnameChange = (e) => { handleChange(e) };
-    // const handleMailChange = (e) => { handleChange(e) };
-    // const handlePhoneChange = (e) => { handleChange(e) };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -253,7 +232,7 @@ const ReservationsFormDetails = ({
                 <HashLink className="button-primary button-back" to="/#home">
                     Back
                 </HashLink>
-                <HashLink
+                <HashLink data-testid="next"
                     className={`button-primary button-next ${!areAllFieldsValid() ? "disabled" : ""}`}
                     onClick={(e) => { (!areAllFieldsValid()) ? e.preventDefault() : goToReview(true); }}
                 >

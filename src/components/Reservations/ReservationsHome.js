@@ -6,7 +6,6 @@ import { fetchAPI, submitAPI } from "../../utils/mockAPI";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
-// const goToReviewContext = React.createContext(false);
 const minimumDate = new Date().toISOString().split("T")[0];
 
 const occasions = ["Birthday", "Anniversary", "Engagement", "Other"];
@@ -21,7 +20,7 @@ const initializeTimes = (initialAvailableTimes) => [
   ...fetchAPI(new Date()),
 ];
 
-const Reservations = () => {
+const ReservationsHome = () => {
 
   const [reviewReservation, setReviewReservation] = useState(false);
 
@@ -56,20 +55,7 @@ const Reservations = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // const updateBooking = {
-    //     bDate: date,
-    //     bTime: time,
-    //     bNumberOfGuests: numberOfGuests,
-    //     bOccasion: occasion,
-    //     bInfo: info,
-    //     bLastname: lastname,
-    //     bFirstname: firstname,
-    //     bMail: mail,
-    //     bPhone: phone
-    // };
-    // setBooking(updateBooking);
-    // goToReview(true);
-    submitData({ booking })
+    submitData({ booking });
 };
   return (
     <section className="reservations container grid">
@@ -92,13 +78,11 @@ const Reservations = () => {
             dispatchOnDateChange={dispatchOnDateChange} /> :
           <ReservationReview
             booking={booking}
-            goToReview={goToReview}
-            availableTimes={availableTimes}
-            submitData={submitData} />}
+            goToReview={goToReview}/>}
       </form>
       </div>
     </section>
   );
 };
 
-export default Reservations;
+export default ReservationsHome;

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import chicago1 from "../../assets/restaurant.jpg";
 import { HashLink } from "react-router-hash-link";
 
@@ -6,9 +5,6 @@ import { HashLink } from "react-router-hash-link";
 const ReservationReview = ({
     booking,
     goToReview,
-    dispatchOnDateChange,
-    submitData,
-    availableTimes,
 }) => {
 
     return (
@@ -33,9 +29,6 @@ const ReservationReview = ({
                     <HashLink className="button-primary button-back" onClick={() => goToReview(false)}>
                         Back
                     </HashLink>
-                    {/* <HashLink className="button-primary button-next" to="/reservationConfirmation"}>
-                    Next
-                </HashLink> */}
                     <button className="button-primary button-next" type="submit">
                         Confirm
                     </button>
