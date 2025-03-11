@@ -29,7 +29,7 @@ const ReservationReview = ({
                     <HashLink className="button-primary button-back" onClick={() => goToReview(false)}>
                         Back
                     </HashLink>
-                    <button className="button-primary button-next" type="submit">
+                    <button className="button-primary button-next" aria-label="Submit the form" type="submit">
                         Confirm
                     </button>
 

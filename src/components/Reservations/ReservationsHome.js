@@ -20,6 +20,7 @@ const initializeTimes = (initialAvailableTimes) => [
   ...fetchAPI(new Date()),
 ];
 
+
 const ReservationsHome = () => {
 
   const [reviewReservation, setReviewReservation] = useState(false);
@@ -48,15 +49,32 @@ const ReservationsHome = () => {
 
   const navigate = useNavigate();
 
+
+  
   const submitData = (formData) => {
     const response = submitAPI(formData);
     if (response) navigate("/confirmation");
   };
 
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    submitData({ booking });
+    
+  const formattedData = {
+    date: booking.bDate,
+    time: booking.bTime,
+    guests: booking.bNumberOfGuests,
+    occasion: booking.bOccasion,
+    info: booking.bInfo,
+    lastName: booking.bLastname,
+    firstName: booking.bFirstname,
+    email: booking.bMail,
+    phone: booking.bPhone,
+  };
+
+    submitData(formattedData);
 };
+
   return (
     <section className="reservations container grid">
       <div className="reservations-header">
