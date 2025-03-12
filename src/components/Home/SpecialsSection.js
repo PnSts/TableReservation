@@ -34,7 +34,7 @@ const SpecialsSection = () => {
     <section className="container grid week-specials" id="menu">
       <div className="week-specials-header">
         <h2>This week specials!</h2>
-        <HashLink className="button-primary" to="/#menu">
+        <HashLink className="button-primary" to="/menu">
           Online Menu
         </HashLink>
       </div>

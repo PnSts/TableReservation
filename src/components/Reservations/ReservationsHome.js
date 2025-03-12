@@ -1,9 +1,9 @@
 import "./reservations.css";
 import { useState, useReducer } from "react";
-import ReservationsFormDetails from "./ReservationsFormDetails";
-import ReservationReview from "./ReservationReview";
 import { fetchAPI, submitAPI } from "../../utils/mockAPI";
 import { useNavigate } from "react-router-dom";
+import ReservationsFormDetails from "./ReservationsFormDetails";
+import ReservationReview from "./ReservationReview";
 import React from "react";
 
 const minimumDate = new Date().toISOString().split("T")[0];
@@ -96,7 +96,8 @@ const ReservationsHome = () => {
             dispatchOnDateChange={dispatchOnDateChange} /> :
           <ReservationReview
             booking={booking}
-            goToReview={goToReview}/>}
+            goToReview={goToReview}
+            availableTimes={availableTimes}/>}
       </form>
       </div>
     </section>

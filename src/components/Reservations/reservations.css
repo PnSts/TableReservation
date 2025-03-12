@@ -1,5 +1,5 @@
+/*Reservations Details*/
 .reservations {
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-rows: auto auto;
   padding: 1rem 0 4rem;
 }
@@ -213,9 +213,9 @@
 @media (max-width: 961px) {
   .confirmed-reservation h1,
   .confirmed-reservation h2,
-  .confirmed-reservation h3{
-width:80%;
-text-align: center;
+  .confirmed-reservation h3 {
+    width: 80%;
+    text-align: center;
   }
 
   .button-next,
@@ -223,6 +223,7 @@ text-align: center;
     justify-self: center;
     width: 60%;
   }
+
   .confirmed-reservation img {
     border-radius: 50%;
     height: 300px;

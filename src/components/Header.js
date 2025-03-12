@@ -7,17 +7,6 @@ import "./header.css";
 import { Link } from "react-router-dom";
 
 
-const sections = [
-    { aName: "Home", urlName:"home", sectionName: "home" },
-    { aName: "About", urlName:"about", sectionName: "about" },
-    { aName: "Menu", urlName:"menu", sectionName: "menu" },
-    { aName: "Reservations", urlName:"reservations", sectionName: "reservations" },
-    { aName: "Order online", urlName:"order_online", sectionName: "order_online" },
-    { aName: "Login", urlName:"login", sectionName: "login" },
-];
-
-
-
 const Header = ({ navLinks }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
@@ -40,21 +29,11 @@ const Header = ({ navLinks }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // const handleClick = (anchor) => () => {
-  //   const id = `${anchor}-section`;
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "start",
-  //     });
-  //   }
-  // };
   
   return (
     <header>
       <nav className="container grid nav-bar">
-        <HashLink className="nav-bar-logo" to="/">
+        <HashLink className="nav-bar-logo" to="/#home">
           <img src={logoImage} alt="Little Lemon logo"/>
         </HashLink>
         <button

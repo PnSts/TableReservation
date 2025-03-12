@@ -15,8 +15,6 @@ const ReservationsFormDetails = ({
 
     const minimumDate = new Date().toISOString().split("T")[0];
 
-    // const defaultTime = availableTimes[0];
-
     const minimumNumberOfGuests = 1;
     const maximumNumberOfGuests = 10;
 
@@ -28,7 +26,6 @@ const ReservationsFormDetails = ({
     const invalidLastNameErrorMessage = "Please enter last name";
     const invalidMailErrorMessage = "Please enter a valid email";
     const invalidPhoneErrorMessage = "Please enter a valid phone number";
-
 
     const [lastname, setLastname] = useState({ isTouched: false });
     const [firstname, setFirstname] = useState({ isTouched: false });
