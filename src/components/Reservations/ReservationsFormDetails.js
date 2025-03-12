@@ -68,7 +68,6 @@ const ReservationsFormDetails = ({
         }));
     };
 
-    
 
     return (
         <section>

@@ -4,7 +4,6 @@ import { HashLink } from "react-router-hash-link";
 
 const ReservationReview = ({
     booking,
-    availableTimes,
     goToReview,
 }) => {
 
