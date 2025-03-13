@@ -2,7 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,git)](https://skillicons.dev)
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    HERE
+  </a>
+</p>
 ## Available Scripts
 
 In the project directory, you can run:
