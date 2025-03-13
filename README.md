@@ -7,7 +7,7 @@ Responsive Website designed with Figma (wireframe, prototype) and contains:
 - Home page and
 - Online reservation system.
 
-# LIVE DEMO: <a href="https://pnsts.github.io/TableReservation/#home" target="blank">Here</a>
+# LIVE DEMO: <a href="https://pnsts.github.io" target="blank">Here</a>
 
 # Technologies Used
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,git)](https://skillicons.dev)
