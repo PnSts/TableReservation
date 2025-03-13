@@ -7,7 +7,7 @@ Responsive Website designed with Figma (wireframe, prototype) and contains:
 - Home page and
 - Online reservation system.
 
-<p style="font-size:20">
+<p style="font-size:20px">
    LIVE DEMO: <a href="">Here</a>
 </p>
 
