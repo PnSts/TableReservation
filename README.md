@@ -7,9 +7,7 @@ Responsive Website designed with Figma (wireframe, prototype) and contains:
 - Home page and
 - Online reservation system.
 
-<p style="font-size:20px">
-   LIVE DEMO: <a href="">Here</a>
-</p>
+# LIVE DEMO: <a href="">Here</a>
 
 # Technologies Used
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,git)](https://skillicons.dev)
