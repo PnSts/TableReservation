@@ -11,4 +11,4 @@ Responsive Website designed with Figma (wireframe, prototype) and contains:
 # Figma Design: <a href="https://www.figma.com/design/Vb2JcJAfpz6Hfz9AGhFB2T/Table_Reservation_Website?node-id=30-45&p=f&t=0JMTGNtgIxtekZDy-0" target="blank">Here</a>
 
 # Technologies Used
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,git)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,jest,json)](https://skillicons.dev)
