@@ -27,7 +27,7 @@ const reviewers = [
     image:
       "https://images.unsplash.com/photo-1581714161666-dade083654ae?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     rating: [1, 1, 1, 1, 1],
-    says: "I loved the menu!! I will came back soon...",
+    says: "I loved the menu!! I will come back soon...",
   },
 ];
 
