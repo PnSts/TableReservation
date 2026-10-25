@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TableReservation/static/css/main.483bfd83.css",
-    "main.js": "/TableReservation/static/js/main.bcd8ea05.js",
+    "main.js": "/TableReservation/static/js/main.239dcc88.js",
     "static/js/453.ff2772c7.chunk.js": "/TableReservation/static/js/453.ff2772c7.chunk.js",
     "static/media/Mario-and-Adrian-B.jpg": "/TableReservation/static/media/Mario-and-Adrian-B.6ba0e06bfa9c1ea75109.jpg",
     "static/media/restaurant chef B.jpg": "/TableReservation/static/media/restaurant chef B.4b4c2d26b514db32e8fc.jpg",
@@ -28,11 +28,11 @@
     "static/media/karla-latin-400.woff2": "/TableReservation/static/media/karla-latin-400.1ad861b3e28d6fe3843c.woff2",
     "index.html": "/TableReservation/index.html",
     "main.483bfd83.css.map": "/TableReservation/static/css/main.483bfd83.css.map",
-    "main.bcd8ea05.js.map": "/TableReservation/static/js/main.bcd8ea05.js.map",
+    "main.239dcc88.js.map": "/TableReservation/static/js/main.239dcc88.js.map",
     "453.ff2772c7.chunk.js.map": "/TableReservation/static/js/453.ff2772c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.483bfd83.css",
-    "static/js/main.bcd8ea05.js"
+    "static/js/main.239dcc88.js"
   ]
 }
