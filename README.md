@@ -108,10 +108,10 @@ Runs Jest in watch mode; press `a` to run every test.
 
 ## License
 
-[MIT](LICENCE.txt) © 2025 Panos Tsoukalas
+[MIT](LICENCE.txt) © 2026 PnSts
 
 ## Author
 
-**Panos Tsoukalas** — [GitHub](https://github.com/PnSts) · [Portfolio](https://pnsts.github.io/PnsPortfolio/)
+**PnSts** — [GitHub](https://github.com/PnSts) · [Portfolio](https://pnsts.github.io/PnsPortfolio/)
 
 <!-- docs-checked: bfb0d53 2026-10-25 rules:e573653 -->
