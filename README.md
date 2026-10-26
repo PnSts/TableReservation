@@ -11,7 +11,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/react/react-original.svg" alt="React" title="React" height="40">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/reactrouter/reactrouter-original.svg" alt="React Router" title="React Router" height="40">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/jest/jest-plain.svg" alt="Jest" title="Jest" height="40">
-  <img src="https://api.iconify.design/logos/testing-library.svg" alt="Testing Library" title="Testing Library" height="40">
+  <img src="https://api.iconify.design/logos/testing-library.svg?height=40" alt="Testing Library" title="Testing Library" height="40">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/figma/figma-original.svg" alt="Figma" title="Figma" height="40">
 </p>
 
