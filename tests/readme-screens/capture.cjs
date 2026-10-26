@@ -1,16 +1,23 @@
-// Captures the README screenshots into docs/images/ (see docs/images/SCREENSHOTS.md).
+// Captures the README screenshots into the folder given as the first argument: a new
+// docs/images/<yyyy-mm-dd>_readme_do_not_delete/ for each capture, with its SCREENSHOTS.md.
 //
 // 1. Start the development server:  npm start   (http://localhost:3000)
 // 2. In another terminal, with Playwright available (npm i -D playwright, or a global install):
-//      node tests/readme-screens/capture.cjs
+//      node tests/readme-screens/capture.cjs docs/images/<yyyy-mm-dd>_readme_do_not_delete
 //    Set BASE_URL to capture from another address, e.g. the GitHub Pages demo:
-//      BASE_URL=https://pnsts.github.io/TableReservation node tests/readme-screens/capture.cjs
+//      BASE_URL=https://pnsts.github.io/TableReservation node tests/readme-screens/capture.cjs <folder>
 
 const path = require("path");
+const fs = require("fs");
 const { chromium } = require("playwright");
 
 const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
-const OUT = path.join(__dirname, "..", "..", "docs", "images");
+if (!process.argv[2]) {
+  console.error("Usage: node tests/readme-screens/capture.cjs <output folder>");
+  process.exit(1);
+}
+const OUT = path.resolve(process.argv[2]);
+fs.mkdirSync(OUT, { recursive: true });
 
 const DESKTOP = { viewport: { width: 1280, height: 1000 } };
 const PHONE = {

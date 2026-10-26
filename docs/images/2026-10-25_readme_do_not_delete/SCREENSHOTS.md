@@ -1,8 +1,9 @@
-# README screenshots
+# README screenshots — 2026-10-25
 
+Captured 2026-10-25 for the README (project `b59661f`); the README links to this folder.
 Language: English (the application is English only).
 Devices: phone and desktop, side by side (responsive website).
-Captured by `tests/readme-screens/capture.cjs` from the GitHub Pages demo
+Captured by `tests/readme-screens/capture.cjs <output folder>` from the GitHub Pages demo
 (`BASE_URL=https://pnsts.github.io/TableReservation`); the site has no backend and no stored data.
 
 | File | Screen | Size | Data and state | Source behind it |

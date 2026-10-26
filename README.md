@@ -47,9 +47,9 @@ It is a single-page React application, designed first in [Figma](https://www.fig
 
 | Home page on a phone | Home page on a desktop |
 |:---:|:---:|
-| <img src="docs/images/home-phone.png" alt="Little Lemon home page on a phone, with the hamburger menu and the hero section" width="260"> | <img src="docs/images/home-desktop.png" alt="Little Lemon home page on a desktop, with the navigation bar and the hero section" width="540"> |
+| <img src="docs/images/2026-10-25_readme_do_not_delete/home-phone.png" alt="Little Lemon home page on a phone, with the hamburger menu and the hero section" width="260"> | <img src="docs/images/2026-10-25_readme_do_not_delete/home-desktop.png" alt="Little Lemon home page on a desktop, with the navigation bar and the hero section" width="540"> |
 | **Table details** | **Review before confirming** |
-| <img src="docs/images/reservation-desktop.png" alt="Reservation form filled in with date, time, guests, occasion and contact details" width="400"> | <img src="docs/images/review-desktop.png" alt="Review step listing the reservation details with Back and Confirm buttons" width="400"> |
+| <img src="docs/images/2026-10-25_readme_do_not_delete/reservation-desktop.png" alt="Reservation form filled in with date, time, guests, occasion and contact details" width="400"> | <img src="docs/images/2026-10-25_readme_do_not_delete/review-desktop.png" alt="Review step listing the reservation details with Back and Confirm buttons" width="400"> |
 
 <sub>Screenshots use demo data.</sub>
 
