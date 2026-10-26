@@ -6,9 +6,16 @@
 
 <br>
 
-<img src="https://skillicons.dev/icons?i=react,js,css,jest,figma&perline=8" alt="React, JavaScript, CSS, Jest, Figma">
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" height="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/react/react-original.svg" alt="React" title="React" height="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/reactrouter/reactrouter-original.svg" alt="React Router" title="React Router" height="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/jest/jest-plain.svg" alt="Jest" title="Jest" height="40">
+  <img src="https://api.iconify.design/logos/testing-library.svg" alt="Testing Library" title="Testing Library" height="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/figma/figma-original.svg" alt="Figma" title="Figma" height="40">
+</p>
 
-<br><br>
+<br>
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENCE.txt)
 
@@ -114,4 +121,4 @@ Runs Jest in watch mode; press `a` to run every test.
 
 **PnSts** — [GitHub](https://github.com/PnSts) · [Portfolio](https://pnsts.github.io/PnsPortfolio/)
 
-<!-- docs-checked: bfb0d53 2026-10-25 rules:e573653 -->
+<!-- docs-checked: 4d7944d 2026-10-26 rules:76a30a3 -->
